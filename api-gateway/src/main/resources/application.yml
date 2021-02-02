@@ -1,0 +1,50 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: api-gateway
+  #MariaDB
+  datasource:
+    url: jdbc:mariadb://localhost:3306/booking_travel_base
+    username: root
+    password: Zxcvbnm1@
+    driver-class-name: org.mariadb.jdbc.Driver
+  #Hibernate Configuration
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    show-sql:  true
+    open-in-view: false
+
+#JWT
+security:
+  jwt:
+    token:
+      header: Authorization
+      secret-key: secret-key
+      expire-length: 3600000 # 5 minutes duration by default: 5 minutes * 60 seconds * 1000 miliseconds
+
+#Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+#Zuul
+zuul:
+  routes:
+    rental:
+      url: http://localhost:8770
+    upload:
+      url: http://localhost:8771
+    eureka:
+      url: http://localhost:8761

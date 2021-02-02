@@ -1,0 +1,40 @@
+server:
+  port: 8770
+
+spring:
+  application:
+    name: rental-service
+  # max request size
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  #MariaDB
+  datasource:
+    url: jdbc:mariadb://localhost:3306/booking_travel_base
+    username: root
+    password: Zxcvbnm1@
+    driver-class-name: org.mariadb.jdbc.Driver
+  #Hibernate Configuration
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    show-sql:  true
+    open-in-view: false
+
+#Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+storage:
+  location: uploads
