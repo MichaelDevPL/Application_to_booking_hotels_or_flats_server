@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: api-gateway
+  # max request size
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
   #MariaDB
   datasource:
     url: jdbc:mariadb://localhost:3306/booking_travel_base

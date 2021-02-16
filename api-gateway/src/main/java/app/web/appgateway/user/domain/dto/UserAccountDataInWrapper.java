@@ -1,5 +1,6 @@
 package app.web.appgateway.user.domain.dto;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UserAccountDataInWrapper {
@@ -9,7 +10,8 @@ public class UserAccountDataInWrapper {
     @JsonProperty("userData")
     private final UserDataOutAndInDTO userData;
 
-    public UserAccountDataInWrapper(AccountDataInDTO accountData, UserDataOutAndInDTO userData) {
+    @JsonCreator
+    public UserAccountDataInWrapper(@JsonProperty("accountData") AccountDataInDTO accountData,@JsonProperty("userData") UserDataOutAndInDTO userData) {
         this.accountData = accountData;
         this.userData = userData;
     }
