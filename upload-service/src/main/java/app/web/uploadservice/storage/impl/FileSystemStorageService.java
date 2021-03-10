@@ -21,6 +21,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.Objects;
 
 @Service
 public class FileSystemStorageService implements StorageService {
@@ -45,7 +46,7 @@ public class FileSystemStorageService implements StorageService {
     @Override
     public FileDataResponse store(MultipartFile file, long userId, String city) {
 
-        final String filename = StringUtils.cleanPath(file.getOriginalFilename());
+        final String filename = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
         final String filePath = userId + "/" + city + "/";
 
         try {
@@ -92,7 +93,13 @@ public class FileSystemStorageService implements StorageService {
     }
 
     @Override
-    public void deleteAll() {
-        FileSystemUtils.deleteRecursively(rootLocation.toFile());
+    public void deleteFile(String filePath) {
+        try {
+            Path file = load(filePath);
+            FileSystemUtils.deleteRecursively(file);
+        } catch (IOException e){
+            throw new StorageException("Failed to delete file " + filePath, e);
+        }
+
     }
 }

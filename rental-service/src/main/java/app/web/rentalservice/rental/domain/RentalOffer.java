@@ -26,21 +26,19 @@ public class RentalOffer {
     @Column(name = "city")
     private String city;
 
-    @Column(name = "street")
-    private String street;
+    @Column(name = "address")
+    private String address;
 
     @Enumerated(EnumType.STRING)
-    private RentalCategory rentalCategory;
-
-    @Column(name = "main_view_image")
-    private String mainViewImage;
+    private RentalCategory category;
 
     @OneToMany(
             mappedBy = "rentalOffer",
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER,
+            orphanRemoval = true
     )
-    private Set<RentalOfferImage> rentalOfferImages = new HashSet<RentalOfferImage>();
+    private Set<RentalImage> rentalImages = new HashSet<RentalImage>();
 
     @Column(name = "daily_rate")
     private float dailyRate;
@@ -51,36 +49,36 @@ public class RentalOffer {
     @Column(name = "offer_owner_id")
     private long offerOwnerId;
 
-    @Column(name = "create_at")
+    @Column(name = "created_at")
     @Temporal(TemporalType.DATE)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-    private Date createAt;
+    private Date createdAt;
 
     @OneToMany(
             mappedBy = "rentalOffer",
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER,
+            orphanRemoval = true
     )
     private Set<RentalSchedule> rentalSchedule = new HashSet<RentalSchedule>();
 
     public RentalOffer() {
     }
 
-    public RentalOffer(long id, String title, String description, String city, String street,
-                       RentalCategory rentalCategory, String mainViewImage, Set<RentalOfferImage> rentalOfferImages,
-                       float dailyRate, int bedrooms, long offerOwnerId, Date createAt, Set<RentalSchedule> rentalSchedule) {
+    public RentalOffer(long id, String title, String description, String city, String address,
+                       RentalCategory category,Set<RentalImage> rentalImages, float dailyRate,
+                       int bedrooms, long offerOwnerId, Date createdAt, Set<RentalSchedule> rentalSchedule) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.city = city;
-        this.street = street;
-        this.rentalCategory = rentalCategory;
-        this.mainViewImage = mainViewImage;
-        this.rentalOfferImages = rentalOfferImages;
+        this.address = address;
+        this.category = category;
+        this.rentalImages = rentalImages;
         this.dailyRate = dailyRate;
         this.bedrooms = bedrooms;
         this.offerOwnerId = offerOwnerId;
-        this.createAt = createAt;
+        this.createdAt = createdAt;
         this.rentalSchedule = rentalSchedule;
     }
 
@@ -116,36 +114,28 @@ public class RentalOffer {
         this.city = city;
     }
 
-    public String getStreet() {
-        return street;
+    public String getAddress() {
+        return address;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public RentalCategory getRentalCategory() {
-        return rentalCategory;
+    public RentalCategory getCategory() {
+        return category;
     }
 
-    public void setRentalCategory(RentalCategory rentalCategory) {
-        this.rentalCategory = rentalCategory;
+    public void setCategory(RentalCategory category) {
+        this.category = category;
     }
 
-    public String getMainViewImage() {
-        return mainViewImage;
+    public Set<RentalImage> getRentalImages() {
+        return rentalImages;
     }
 
-    public void setMainViewImage(String mainViewImage) {
-        this.mainViewImage = mainViewImage;
-    }
-
-    public Set<RentalOfferImage> getRentalOfferImages() {
-        return rentalOfferImages;
-    }
-
-    public void setRentalOfferImages(Set<RentalOfferImage> rentalOfferImages) {
-        this.rentalOfferImages = rentalOfferImages;
+    public void setRentalImages(Set<RentalImage> rentalImages) {
+        this.rentalImages = rentalImages;
     }
 
     public float getDailyRate() {
@@ -172,12 +162,12 @@ public class RentalOffer {
         this.offerOwnerId = offerOwnerId;
     }
 
-    public Date getCreateAt() {
-        return createAt;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreateAt(Date createAt) {
-        this.createAt = createAt;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
     public Set<RentalSchedule> getRentalSchedule() {
@@ -195,14 +185,13 @@ public class RentalOffer {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", city='" + city + '\'' +
-                ", street='" + street + '\'' +
-                ", rentalCategory=" + rentalCategory +
-                ", mainViewImage='" + mainViewImage + '\'' +
-                ", rentalOfferImages=" + rentalOfferImages +
+                ", address='" + address + '\'' +
+                ", category=" + category +
+                ", rentalImages=" + rentalImages +
                 ", dailyRate=" + dailyRate +
                 ", bedrooms=" + bedrooms +
                 ", offerOwnerId=" + offerOwnerId +
-                ", createAt=" + createAt +
+                ", createdAt=" + createdAt +
                 ", rentalSchedule=" + rentalSchedule +
                 '}';
     }

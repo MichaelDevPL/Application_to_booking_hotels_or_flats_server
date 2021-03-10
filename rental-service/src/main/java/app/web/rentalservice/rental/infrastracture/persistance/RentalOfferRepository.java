@@ -1,19 +1,20 @@
 package app.web.rentalservice.rental.infrastracture.persistance;
 
 import app.web.rentalservice.rental.domain.RentalOffer;
+import app.web.rentalservice.rental.domain.dto.DataToSearchForOffersDto;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface RentalOfferRepository {
 
-    Optional<List<RentalOffer>> getRentalOfferByClientPreferences();
-    Optional<List<RentalOffer>> getAllRentalOfferByUserId(long userId);
+    List<RentalOffer> getOffersMatchingTheParameters(DataToSearchForOffersDto dataToSearchForOffersDto);
+    List<RentalOffer> getOfferByOfferOwnerId(long userId);
 
-    void createRentalOffer(RentalOffer rentalOffer);
+    boolean createRentalOffer(RentalOffer newRentalOffer);
     void updateRentalOffer(RentalOffer rentalOffer);
     void deleteRentalOffer(RentalOffer rentalOffer);
 
     /*_____________________________________________________________________________________________________________________________*/
-    Optional<List<RentalOffer>> getAllTestValium();
+//    Optional<List<RentalOffer>> getAllTestValium();
 }

@@ -1,6 +1,7 @@
 package app.web.uploadservice.commons;
 
 public class FileDataResponse {
+    
     private String path;
 
     public FileDataResponse() {

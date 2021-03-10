@@ -44,5 +44,12 @@ public class FileController {
                 .body(resource);
     }
 
+    @DeleteMapping("/delete-image/{userId}/{city}/{image}")
+    public void deleteImageFile(@PathVariable String userId,
+                                @PathVariable String city,
+                                @PathVariable String image){
+        storageService.deleteFile(userId + "/" + city + "/" + image);
+    }
+
 
 }

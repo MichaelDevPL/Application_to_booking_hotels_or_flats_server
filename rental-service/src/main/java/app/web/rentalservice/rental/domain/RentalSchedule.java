@@ -31,7 +31,7 @@ public class RentalSchedule {
     private long clientId;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "fk_rental_offer_id", nullable = false)
+    @JoinColumn(name = "fk_rental_offer_id", referencedColumnName = "id" , nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private RentalOffer rentalOffer;

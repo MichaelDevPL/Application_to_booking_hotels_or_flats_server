@@ -1,6 +1,6 @@
 package app.web.rentalservice.rental.infrastracture.persistance.impl;
 
-import app.web.rentalservice.rental.domain.RentalOfferImage;
+import app.web.rentalservice.rental.domain.RentalImage;
 import app.web.rentalservice.rental.infrastracture.persistance.RentalImageRepository;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.stereotype.Repository;
@@ -10,27 +10,27 @@ import javax.persistence.EntityManager;
 
 @Transactional
 @Repository
-public class RentalImageRepositoryImpl extends SimpleJpaRepository<RentalOfferImage, Long> implements RentalImageRepository {
+public class RentalImageRepositoryImpl extends SimpleJpaRepository<RentalImage, Long> implements RentalImageRepository {
 
     private EntityManager em;
 
     public RentalImageRepositoryImpl(EntityManager em){
-        super(RentalOfferImage.class, em);
+        super(RentalImage.class, em);
         this.em = em;
     }
 
     @Override
-    public void createRentalOfferImage(RentalOfferImage rentalOfferImage) {
+    public void createRentalOfferImage(RentalImage rentalImage) {
 
     }
 
     @Override
-    public void updateRentalOfferImage(RentalOfferImage rentalOfferImage) {
+    public void updateRentalOfferImage(RentalImage rentalImage) {
 
     }
 
     @Override
-    public void deleteRentalOfferImage(RentalOfferImage rentalOfferImage) {
+    public void deleteRentalOfferImage(RentalImage rentalImage) {
 
     }
 }

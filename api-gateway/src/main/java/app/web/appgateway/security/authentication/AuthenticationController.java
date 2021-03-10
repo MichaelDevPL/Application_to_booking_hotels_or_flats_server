@@ -3,8 +3,8 @@ package app.web.appgateway.security.authentication;
 import app.web.appgateway.security.jtw.JwtToken;
 import app.web.appgateway.user.domain.Account;
 import app.web.appgateway.user.domain.User;
-import app.web.appgateway.user.domain.dto.LoginDataInDTO;
-import app.web.appgateway.user.domain.dto.UserAccountDataInWrapper;
+import app.web.appgateway.user.domain.dto.SignInDTO;
+import app.web.appgateway.user.domain.dto.SignUpWrapper;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,12 +20,12 @@ public class AuthenticationController {
     }
 
     @PostMapping("/signin")
-    public JwtToken login(@RequestBody LoginDataInDTO loginDataInDTO){
-        return authenticationService.signIn(loginDataInDTO);
+    public JwtToken login(@RequestBody SignInDTO signInDTO){
+        return authenticationService.signIn(signInDTO);
     }
 
     @PostMapping("/signup")
-    public boolean signup(@RequestBody UserAccountDataInWrapper dataInWrapper){
+    public boolean signup(@RequestBody SignUpWrapper dataInWrapper){
 
 
         Account newAccount = new Account(dataInWrapper.getAccountData().getLogin(),

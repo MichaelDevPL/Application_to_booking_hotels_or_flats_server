@@ -1,13 +1,13 @@
 package app.web.rentalservice.rental.infrastracture.persistance;
 
-import app.web.rentalservice.rental.domain.RentalOfferImage;
+import app.web.rentalservice.rental.domain.RentalImage;
 
 public interface RentalImageRepository {
 
-    void createRentalOfferImage(RentalOfferImage rentalOfferImage);
+    void createRentalOfferImage(RentalImage rentalImage);
 
-    void updateRentalOfferImage(RentalOfferImage rentalOfferImage);
+    void updateRentalOfferImage(RentalImage rentalImage);
 
-    void deleteRentalOfferImage(RentalOfferImage rentalOfferImage);
+    void deleteRentalOfferImage(RentalImage rentalImage);
 
 }

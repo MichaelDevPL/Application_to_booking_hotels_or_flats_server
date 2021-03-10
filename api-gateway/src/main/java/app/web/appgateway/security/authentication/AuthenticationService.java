@@ -5,7 +5,7 @@ import app.web.appgateway.security.jtw.JwtToken;
 import app.web.appgateway.security.jtw.JwtTokenProvider;
 import app.web.appgateway.user.domain.Account;
 import app.web.appgateway.user.domain.User;
-import app.web.appgateway.user.domain.dto.LoginDataInDTO;
+import app.web.appgateway.user.domain.dto.SignInDTO;
 import app.web.appgateway.user.infrastracture.persistance.AccountRepository;
 import app.web.appgateway.user.infrastracture.persistance.UserRepository;
 import org.springframework.http.HttpStatus;
@@ -33,17 +33,17 @@ public class AuthenticationService {
         this.authenticationManager = authenticationManager;
     }
 
-    public JwtToken signIn(LoginDataInDTO loginDataInDTO) {
+    public JwtToken signIn(SignInDTO signInDTO) {
         if (!accountRepository.verificationLoginAndPassword(
-                loginDataInDTO.getLogin(), loginDataInDTO.getPassword())) {
+                signInDTO.getLogin(), signInDTO.getPassword())) {
 
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-                    loginDataInDTO.getLogin(), loginDataInDTO.getPassword()));
+                    signInDTO.getLogin(), signInDTO.getPassword()));
 
             //it's ok become condition verificationLoginAndPassword passed
             return jwtTokenProvider.generateJwtToken(
-                    loginDataInDTO.getLogin(), accountRepository.getByLogin(
-                            loginDataInDTO.getLogin()).get().getRole());
+                    signInDTO.getLogin(), accountRepository.getByLogin(
+                            signInDTO.getLogin()).get().getRole());
         } else {
             throw new CustomException("Invalid login/password supplied", HttpStatus.UNPROCESSABLE_ENTITY);
         }
