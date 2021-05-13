@@ -1,6 +1,9 @@
 package app.web.appgateway.user.infrastracture.web;
 
+import app.web.appgateway.user.domain.User;
 import app.web.appgateway.user.infrastracture.persistance.UserRepository;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,5 +17,8 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-
+    @PostMapping(value = "/upload")
+    public void uploadUserData (@RequestBody User user) {
+        this.userRepository.updateUser(user);
+    }
 }

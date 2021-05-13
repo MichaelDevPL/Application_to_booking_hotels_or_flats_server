@@ -16,7 +16,7 @@ public class UserRepositoryImpl extends SimpleJpaRepository<User, Long> implemen
 
     private EntityManager em;
 
-    public UserRepositoryImpl(EntityManager em){
+    public UserRepositoryImpl(EntityManager em) {
         super(User.class, em);
         this.em = em;
     }
@@ -72,8 +72,10 @@ public class UserRepositoryImpl extends SimpleJpaRepository<User, Long> implemen
     }
 
     @Override
-    public User updateUser(User user) {
-        return save(user);
+    public void updateUser(User user) {
+        user.setAccount(getUserById(user.getId())
+                .map(User::getAccount).orElseThrow(() -> new IllegalArgumentException("No user with ID: " + user.getId())));
+        save(user);
     }
 
     @Override

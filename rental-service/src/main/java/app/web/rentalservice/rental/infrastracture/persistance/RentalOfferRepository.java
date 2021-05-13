@@ -10,11 +10,10 @@ public interface RentalOfferRepository {
 
     List<RentalOffer> getOffersMatchingTheParameters(DataToSearchForOffersDto dataToSearchForOffersDto);
     List<RentalOffer> getOfferByOfferOwnerId(long userId);
+    RentalOffer getRentalOfferById (long id);
 
     boolean createRentalOffer(RentalOffer newRentalOffer);
     void updateRentalOffer(RentalOffer rentalOffer);
     void deleteRentalOffer(RentalOffer rentalOffer);
 
-    /*_____________________________________________________________________________________________________________________________*/
-//    Optional<List<RentalOffer>> getAllTestValium();
 }

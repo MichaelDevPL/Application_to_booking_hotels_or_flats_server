@@ -2,14 +2,17 @@ package app.web.rentalservice.rental.infrastracture.persistance;
 
 import app.web.rentalservice.rental.domain.RentalSchedule;
 
+import java.util.List;
+import java.util.Optional;
+
 public interface RentalScheduleRepository {
 
-    boolean checkAvailableOfRentalOfferInPeriod();
+    public List<RentalSchedule> getAllByClientId(long clientId);
 
-    void createRentalOfferInSchedule(RentalSchedule rentalSchedule);
+    void createReserve(RentalSchedule rentalSchedule);
 
-    void updateRentalOfferSchedule(RentalSchedule rentalSchedule);
+    void updateReserve(RentalSchedule rentalSchedule);
 
-    void deleteRentalOfferSchedule(RentalSchedule rentalSchedule);
+    void deleteReserve(RentalSchedule rentalSchedule);
 
 }

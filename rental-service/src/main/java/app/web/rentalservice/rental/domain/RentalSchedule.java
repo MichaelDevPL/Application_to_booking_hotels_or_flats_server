@@ -19,18 +19,19 @@ public class RentalSchedule {
 
     @Column(name = "start_rent_date")
     @Temporal(TemporalType.DATE)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date startRentDate;
 
     @Column(name = "end_rent_date")
     @Temporal(TemporalType.DATE)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date endRentDate;
 
     @Column(name = "client_id")
     private long clientId;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @Column(name = "price")
+    private float price;
+
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "fk_rental_offer_id", referencedColumnName = "id" , nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
@@ -39,10 +40,11 @@ public class RentalSchedule {
     public RentalSchedule() {
     }
 
-    public RentalSchedule(Date startRentDate, Date endRentDate, long clientId, RentalOffer rentalOffer) {
+    public RentalSchedule(Date startRentDate, Date endRentDate, long clientId, float price, RentalOffer rentalOffer) {
         this.startRentDate = startRentDate;
         this.endRentDate = endRentDate;
         this.clientId = clientId;
+        this.price = price;
         this.rentalOffer = rentalOffer;
     }
 
@@ -78,22 +80,19 @@ public class RentalSchedule {
         this.clientId = clientId;
     }
 
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
     public RentalOffer getRentalOffer() {
         return rentalOffer;
     }
 
     public void setRentalOffer(RentalOffer rentalOffer) {
         this.rentalOffer = rentalOffer;
-    }
-
-    @Override
-    public String toString() {
-        return "RentalSchedule{" +
-                "id=" + id +
-                ", startRentDate=" + startRentDate +
-                ", endRentDate=" + endRentDate +
-                ", clientId=" + clientId +
-                ", rentalOffer=" + rentalOffer +
-                '}';
     }
 }

@@ -3,7 +3,6 @@ package app.web.rentalservice.rental.domain.dto;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -13,11 +12,9 @@ public class DataToSearchForOffersDto {
     private final String city;
 
     @JsonProperty("startDate")
-    @JsonFormat(pattern="dd-MM-yyyy")
     private final Date startDate;
 
     @JsonProperty("endDate")
-    @JsonFormat(pattern="dd-MM-yyyy")
     private final Date endDate;
 
     @JsonProperty("numberOfGuest")

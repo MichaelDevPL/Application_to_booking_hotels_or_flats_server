@@ -20,7 +20,7 @@ public class RentalOffer {
     @Column(name = "title")
     private String title;
 
-    @Column(name = "description")
+    @Column(name = "description", columnDefinition = "LONGTEXT")
     private String description;
 
     @Column(name = "city")
@@ -46,12 +46,14 @@ public class RentalOffer {
     @Column(name = "bedrooms")
     private int bedrooms;
 
+    @Column(name = "quests")
+    private int quests;
+
     @Column(name = "offer_owner_id")
     private long offerOwnerId;
 
     @Column(name = "created_at")
     @Temporal(TemporalType.DATE)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date createdAt;
 
     @OneToMany(
@@ -62,12 +64,22 @@ public class RentalOffer {
     )
     private Set<RentalSchedule> rentalSchedule = new HashSet<RentalSchedule>();
 
+    @OneToMany(
+            mappedBy = "rentalOffer",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
+            orphanRemoval = true
+    )
+    @OrderBy("create_at desc")
+    private Set<ClientReview> clientReviews = new HashSet<ClientReview>();
+
     public RentalOffer() {
     }
 
-    public RentalOffer(long id, String title, String description, String city, String address,
-                       RentalCategory category,Set<RentalImage> rentalImages, float dailyRate,
-                       int bedrooms, long offerOwnerId, Date createdAt, Set<RentalSchedule> rentalSchedule) {
+    public RentalOffer(long id, String title, String description, String city,
+                       String address, RentalCategory category, Set<RentalImage> rentalImages,
+                       float dailyRate, int bedrooms, int quests, long offerOwnerId,
+                       Date createdAt, Set<RentalSchedule> rentalSchedule, Set<ClientReview> clientReviews) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -77,9 +89,11 @@ public class RentalOffer {
         this.rentalImages = rentalImages;
         this.dailyRate = dailyRate;
         this.bedrooms = bedrooms;
+        this.quests = quests;
         this.offerOwnerId = offerOwnerId;
         this.createdAt = createdAt;
         this.rentalSchedule = rentalSchedule;
+        this.clientReviews = clientReviews;
     }
 
     public long getId() {
@@ -154,6 +168,14 @@ public class RentalOffer {
         this.bedrooms = bedrooms;
     }
 
+    public int getQuests() {
+        return quests;
+    }
+
+    public void setQuests(int quests) {
+        this.quests = quests;
+    }
+
     public long getOfferOwnerId() {
         return offerOwnerId;
     }
@@ -178,21 +200,11 @@ public class RentalOffer {
         this.rentalSchedule = rentalSchedule;
     }
 
-    @Override
-    public String toString() {
-        return "RentalOffer{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", city='" + city + '\'' +
-                ", address='" + address + '\'' +
-                ", category=" + category +
-                ", rentalImages=" + rentalImages +
-                ", dailyRate=" + dailyRate +
-                ", bedrooms=" + bedrooms +
-                ", offerOwnerId=" + offerOwnerId +
-                ", createdAt=" + createdAt +
-                ", rentalSchedule=" + rentalSchedule +
-                '}';
+    public Set<ClientReview> getClientReviews() {
+        return clientReviews;
+    }
+
+    public void setClientReviews(Set<ClientReview> clientReviews) {
+        this.clientReviews = clientReviews;
     }
 }

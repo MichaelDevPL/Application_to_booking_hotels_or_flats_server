@@ -4,23 +4,23 @@ import app.web.rentalservice.rental.domain.RentalImage;
 
 import java.util.Set;
 
-public class RentalOfferDto {
+public class RentalOfferDTO {
 
     private long id;
     private String title;
-    private String address;
-    private String city;
+    private String description;
     private Set<RentalImage> rentalImages;
     private double dailyRate;
+    private double clientAverageGrades;
 
-    public RentalOfferDto(long id, String title, String address, String city,
-                          Set<RentalImage> rentalImages, double dailyRate) {
+    public RentalOfferDTO(long id, String title, String description, Set<RentalImage> rentalImages, double dailyRate,
+                          double clientAverageGrades) {
         this.id = id;
         this.title = title;
-        this.address = address;
-        this.city = city;
+        this.description = description;
         this.rentalImages = rentalImages;
         this.dailyRate = dailyRate;
+        this.clientAverageGrades = clientAverageGrades;
     }
 
     public long getId() {
@@ -39,20 +39,12 @@ public class RentalOfferDto {
         this.title = title;
     }
 
-    public String getAddress() {
-        return address;
+    public String getDescription() {
+        return description;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Set<RentalImage> getRentalImages() {
@@ -71,15 +63,11 @@ public class RentalOfferDto {
         this.dailyRate = dailyRate;
     }
 
-    @Override
-    public String toString() {
-        return "RentalOfferOut{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", rentalImages=" + rentalImages +
-                ", dailyRate=" + dailyRate +
-                '}';
+    public double getClientAverageGrades() {
+        return clientAverageGrades;
+    }
+
+    public void setClientAverageGrades(double clientAverageGrades) {
+        this.clientAverageGrades = clientAverageGrades;
     }
 }

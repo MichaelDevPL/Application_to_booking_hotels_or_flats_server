@@ -60,8 +60,8 @@ public class AuthenticationService {
                 account.setPassword(passwordEncoder.encode(account.getPassword()));
 
                 user.setAccount(account);
-                userRepository.createUser(user);
                 accountRepository.createAccount(account);
+                userRepository.createUser(user);
 
                 return true;
             }else{

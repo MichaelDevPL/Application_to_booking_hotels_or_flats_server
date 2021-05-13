@@ -56,13 +56,4 @@ public class RentalImage {
     public void setRentalOffer(RentalOffer rentalOffer) {
         this.rentalOffer = rentalOffer;
     }
-
-    @Override
-    public String toString() {
-        return "RentalImage{" +
-                "id=" + id +
-                ", path='" + path + '\'' +
-                ", rentalOffer=" + rentalOffer +
-                '}';
-    }
 }

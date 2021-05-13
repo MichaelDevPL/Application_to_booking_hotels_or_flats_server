@@ -1,5 +1,7 @@
 package app.web.appgateway.user.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 
@@ -25,12 +27,9 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @OneToOne(
-            mappedBy = "user",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY,
-            orphanRemoval = true
-    )
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_account_id", referencedColumnName = "id", nullable = false)
+    @JsonIgnore
     private Account account;
 
     public User() {

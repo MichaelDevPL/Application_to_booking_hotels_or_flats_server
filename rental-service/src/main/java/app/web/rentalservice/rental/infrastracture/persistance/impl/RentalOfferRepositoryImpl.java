@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;
-import java.util.Optional;
 
 @Transactional
 @Repository
@@ -27,7 +26,7 @@ public class RentalOfferRepositoryImpl extends SimpleJpaRepository<RentalOffer, 
     public List<RentalOffer> getOffersMatchingTheParameters(DataToSearchForOffersDto dataToSearchForOffersDto) {
         String sqlQuery = "SELECT r FROM RentalOffer r" +
                 " WHERE r.city=:city" +
-                " and r.bedrooms=:bedrooms" +
+                " and (r.bedrooms=:bedrooms or r.quests=:quests)" +
                 " and not EXISTS (" +
                 " SELECT rs FROM RentalSchedule rs" +
                 " WHERE rs.startRentDate BETWEEN :startDate and :endDate" +
@@ -37,18 +36,21 @@ public class RentalOfferRepositoryImpl extends SimpleJpaRepository<RentalOffer, 
 
         query.setParameter("city", dataToSearchForOffersDto.getCity());
         query.setParameter("bedrooms", dataToSearchForOffersDto.getNumberOfRoom());
+        query.setParameter("quests", dataToSearchForOffersDto.getNumberOfGuest());
         query.setParameter("startDate", dataToSearchForOffersDto.getStartDate());
         query.setParameter("endDate", dataToSearchForOffersDto.getEndDate());
 
-        List<RentalOffer> offers = query.getResultList();
-
-        return offers;
-
+        return (List<RentalOffer>) query.getResultList();
     }
 
     @Override
     public List<RentalOffer> getOfferByOfferOwnerId(long userId) {
         return null;
+    }
+
+    @Override
+    public RentalOffer getRentalOfferById(long id) {
+        return em.find(RentalOffer.class, id);
     }
 
     @Override
@@ -68,18 +70,4 @@ public class RentalOfferRepositoryImpl extends SimpleJpaRepository<RentalOffer, 
         delete(rentalOffer);
     }
 
-//    /*_____________________________________________________________________________________________________________________________*/
-//    @Override
-//    public Optional<List<RentalOffer>> getAllTestValium(){
-//        String sqlQuery= "SELECT r FROM RentalOffer r JOIN FETCH r.rentalOfferImages JOIN FETCH r.rentalSchedule";
-//        Query query = em.createQuery(sqlQuery);
-//
-//        List<RentalOffer> rentalOffers = query.getResultList();
-//
-//        if (rentalOffers.isEmpty()) {
-//            throw new IllegalArgumentException("No account with such id: ");
-//        }
-//
-//        return Optional.of(rentalOffers);
-//    }
 }
