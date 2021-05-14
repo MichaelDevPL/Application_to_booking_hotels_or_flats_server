@@ -26,7 +26,7 @@ public class RentalOfferRepositoryImpl extends SimpleJpaRepository<RentalOffer, 
     public List<RentalOffer> getOffersMatchingTheParameters(DataToSearchForOffersDto dataToSearchForOffersDto) {
         String sqlQuery = "SELECT r FROM RentalOffer r" +
                 " WHERE r.city=:city" +
-                " and (r.bedrooms=:bedrooms or r.quests=:quests)" +
+                " and (r.bedrooms=:bedrooms or r.guests=:guests)" +
                 " and not EXISTS (" +
                 " SELECT rs FROM RentalSchedule rs" +
                 " WHERE rs.startRentDate BETWEEN :startDate and :endDate" +
@@ -36,7 +36,7 @@ public class RentalOfferRepositoryImpl extends SimpleJpaRepository<RentalOffer, 
 
         query.setParameter("city", dataToSearchForOffersDto.getCity());
         query.setParameter("bedrooms", dataToSearchForOffersDto.getNumberOfRoom());
-        query.setParameter("quests", dataToSearchForOffersDto.getNumberOfGuest());
+        query.setParameter("guests", dataToSearchForOffersDto.getNumberOfGuest());
         query.setParameter("startDate", dataToSearchForOffersDto.getStartDate());
         query.setParameter("endDate", dataToSearchForOffersDto.getEndDate());
 

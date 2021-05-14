@@ -20,7 +20,6 @@ public class RentalImage {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "fk_rental_offer_id", referencedColumnName = "id",nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private RentalOffer rentalOffer;
 

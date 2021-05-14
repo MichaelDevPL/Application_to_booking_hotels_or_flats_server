@@ -23,7 +23,7 @@ public class ClientReview {
     @Column(name = "comment", columnDefinition = "TEXT")
     private String comment;
 
-    @Column(name = "create_at")
+    @Column(name = "created_at")
     @Temporal(TemporalType.DATE)
     private Date createdAt;
 
@@ -32,7 +32,6 @@ public class ClientReview {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "fk_rental_offer_id", referencedColumnName = "id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private RentalOffer rentalOffer;
 

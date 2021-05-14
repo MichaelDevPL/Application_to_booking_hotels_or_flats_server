@@ -2,7 +2,7 @@ package app.web.rentalservice.rental.infrastracture.persistance;
 
 import app.web.rentalservice.rental.domain.RentalImage;
 
-public interface RentalImageRepository {
+public interface RentalOfferImageRepository {
 
     void createRentalOfferImage(RentalImage rentalImage);
 

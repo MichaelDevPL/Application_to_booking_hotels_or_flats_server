@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="60ed90a2-3982-4cdd-a98e-2d4c725b1feb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/ClientReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/ClientReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/RentalImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/RentalImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/RentalOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/RentalOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/RentalSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/RentalSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/BookedOfferAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/ReservationAssembler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/BookedOfferDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/ReservationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/DataToSearchForOffersDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/DataToSearchForOffersDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/NewOfferReviewDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/NewOfferReviewDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/RentalOfferAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/RentalOfferAssembler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/RentalOfferDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/RentalOfferDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/ReserveOfferDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/NewReservationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/OfferReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalOfferReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalOfferImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalScheduleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalOfferScheduleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/OfferReviewRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferReviewRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalImageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferImageRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalScheduleRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferScheduleRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/web/RentalOfferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/web/RentalOfferController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/util/DtoAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/util/DtoAssembler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/159893325.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/159893325.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257101632.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257101632.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257102743.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257102743.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257103943.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257103943.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257106498.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257106498.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257107560.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257107560.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257108605.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257108605.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257109948.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257109948.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/106539183.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/106539183.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/106596257.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/106596257.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/115648799.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/115648799.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/115650468.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/115650468.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/116877724.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/116877724.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/123367431.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/123367431.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/124810017.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/124810017.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/124810202.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/124810202.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/13125860.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/13125860.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/13125861.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/13125861.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/13125904.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/13125904.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/159893325.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/159893325.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/159893369.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/159893369.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/159893378.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/159893378.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164435364.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164435364.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164436534.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164436534.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164436940.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164436940.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164438962.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164438962.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213494803.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213494803.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213502124.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213502124.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213502128.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213502128.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213502135.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213502135.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225060852.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225060852.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225810874.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225810874.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/232641906.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/232641906.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/238403042.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/238403042.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/239329894.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/239329894.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/249824676.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/249824676.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/254185795.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/254185795.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/274031884.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/274031884.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/286771971.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/286771971.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/287353447.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/287353447.jpg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/api-gateway">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/discovery-server">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/rental-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/upload-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1oZ9gtf0ZtMKFlDQGlEI0DDJWlA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.5114943" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="app.web.rentalservice.rental.infrastracture.persistance" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.RentalServiceApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.web.appgateway.ApiGatewayApplication" />
+      <module name="api-gateway.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.web.appgateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.web.discoveryserver.DiscoveryServerApplication" />
+      <module name="discovery-server.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.web.discoveryserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RentalServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.web.rentalservice.RentalServiceApplication" />
+      <module name="rental-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.web.rentalservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.web.uploadservice.UploadServiceApplication" />
+      <module name="upload-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.web.uploadservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="api-gateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="app.web.appgateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="discovery-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="app.web.discoveryserver.DiscoveryServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RentalServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rental-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="app.web.rentalservice.RentalServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="upload-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="app.web.uploadservice.UploadServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ApiGatewayApplication" />
+      <item itemvalue="Application.DiscoveryServerApplication" />
+      <item itemvalue="Application.RentalServiceApplication" />
+      <item itemvalue="Application.UploadServiceApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.RentalServiceApplication" />
+      <item itemvalue="Spring Boot.UploadServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RentalServiceApplication" />
+        <item itemvalue="Application.UploadServiceApplication" />
+        <item itemvalue="Application.DiscoveryServerApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60ed90a2-3982-4cdd-a98e-2d4c725b1feb" name="Default Changelist" comment="" />
+      <created>1613483361506</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613483361506</updated>
+      <workItem from="1614527397242" duration="778000" />
+      <workItem from="1614601447220" duration="681000" />
+      <workItem from="1614702953682" duration="612000" />
+      <workItem from="1614712475204" duration="1811000" />
+      <workItem from="1614769889902" duration="3039000" />
+      <workItem from="1614786616562" duration="5197000" />
+      <workItem from="1614872015761" duration="892000" />
+      <workItem from="1615105197015" duration="3255000" />
+      <workItem from="1615205471325" duration="8948000" />
+      <workItem from="1615229530044" duration="5403000" />
+      <workItem from="1615241585007" duration="7150000" />
+      <workItem from="1615363854281" duration="78000" />
+      <workItem from="1615452017054" duration="6716000" />
+      <workItem from="1615482458343" duration="2481000" />
+      <workItem from="1615807890196" duration="4321000" />
+      <workItem from="1615932253607" duration="745000" />
+      <workItem from="1615973717570" duration="3253000" />
+      <workItem from="1616013666334" duration="2414000" />
+      <workItem from="1616096408051" duration="1205000" />
+      <workItem from="1616166128934" duration="663000" />
+      <workItem from="1616327123291" duration="599000" />
+      <workItem from="1616364258816" duration="599000" />
+      <workItem from="1616453485798" duration="1038000" />
+      <workItem from="1616498182958" duration="2310000" />
+      <workItem from="1616524831745" duration="701000" />
+      <workItem from="1616585206852" duration="1586000" />
+      <workItem from="1616773515042" duration="355000" />
+      <workItem from="1616969314122" duration="6701000" />
+      <workItem from="1617026627517" duration="1239000" />
+      <workItem from="1617142921348" duration="60000" />
+      <workItem from="1617143011966" duration="3376000" />
+      <workItem from="1617223230224" duration="1207000" />
+      <workItem from="1617297500338" duration="1877000" />
+      <workItem from="1617525173951" duration="1552000" />
+      <workItem from="1617536759667" duration="2015000" />
+      <workItem from="1617577847827" duration="610000" />
+      <workItem from="1617615235163" duration="4812000" />
+      <workItem from="1617642885691" duration="7245000" />
+      <workItem from="1617707400591" duration="3961000" />
+      <workItem from="1617732724520" duration="1304000" />
+      <workItem from="1617785502909" duration="5149000" />
+      <workItem from="1617994319777" duration="10235000" />
+      <workItem from="1618093999772" duration="701000" />
+      <workItem from="1618148869657" duration="1239000" />
+      <workItem from="1618164588956" duration="1809000" />
+      <workItem from="1618217452138" duration="650000" />
+      <workItem from="1618226347299" duration="704000" />
+      <workItem from="1618252254181" duration="2192000" />
+      <workItem from="1618315443167" duration="1261000" />
+      <workItem from="1618327490270" duration="629000" />
+      <workItem from="1618333335898" duration="2263000" />
+      <workItem from="1618584645447" duration="665000" />
+      <workItem from="1618767587707" duration="867000" />
+      <workItem from="1618850939232" duration="4621000" />
+      <workItem from="1618917624480" duration="5487000" />
+      <workItem from="1618942609906" duration="1506000" />
+      <workItem from="1619001371487" duration="13701000" />
+      <workItem from="1620671262741" duration="560000" />
+      <workItem from="1620671845254" duration="1131000" />
+      <workItem from="1620673621493" duration="437000" />
+      <workItem from="1620674558819" duration="3217000" />
+      <workItem from="1620815369830" duration="1448000" />
+      <workItem from="1620828177217" duration="1619000" />
+      <workItem from="1620943044467" duration="6276000" />
+      <workItem from="1620949470567" duration="1286000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="java-exception">
+          <dependency id="0" />
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="app.web.rentalservice.rental.domain.ClientReview" memberName="rentalOffer" />
+        <PinnedItemInfo parentTag="app.web.rentalservice.rental.domain.ClientReview" memberName="accountNick" />
+        <PinnedItemInfo parentTag="app.web.rentalservice.rental.domain.dto.ReserveOfferDto" memberName="rentalOfferId" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

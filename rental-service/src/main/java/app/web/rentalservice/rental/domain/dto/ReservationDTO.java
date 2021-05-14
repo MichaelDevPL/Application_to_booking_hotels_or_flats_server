@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
-public class BookedOfferDTO {
+public class ReservationDTO {
 
     @JsonProperty("id")
     private long id;
@@ -24,7 +24,7 @@ public class BookedOfferDTO {
     @JsonProperty("rentalOfferID")
     private long rentalOfferID;
 
-    public BookedOfferDTO(@JsonProperty("id") long id,
+    public ReservationDTO(@JsonProperty("id") long id,
                           @JsonProperty("offerTittle") String offerTittle,
                           @JsonProperty("startRentDate") Date startRentDate,
                           @JsonProperty("endRentDate") Date endRentDate,

@@ -31,9 +31,8 @@ public class RentalSchedule {
     @Column(name = "price")
     private float price;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "fk_rental_offer_id", referencedColumnName = "id" , nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private RentalOffer rentalOffer;
 

@@ -5,11 +5,11 @@ import app.web.rentalservice.util.DtoAssembler;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BookedOfferAssembler implements DtoAssembler<BookedOfferDTO, RentalSchedule> {
+public class ReservationAssembler implements DtoAssembler<ReservationDTO, RentalSchedule> {
 
     @Override
-    public BookedOfferDTO assemble(RentalSchedule entityObject) {
-        return new BookedOfferDTO(entityObject.getId(), entityObject.getRentalOffer().getTitle(),
+    public ReservationDTO assemble(RentalSchedule entityObject) {
+        return new ReservationDTO(entityObject.getId(), entityObject.getRentalOffer().getTitle(),
                 entityObject.getStartRentDate(), entityObject.getEndRentDate(),
                 entityObject.getPrice(), entityObject.getRentalOffer().getId());
     }

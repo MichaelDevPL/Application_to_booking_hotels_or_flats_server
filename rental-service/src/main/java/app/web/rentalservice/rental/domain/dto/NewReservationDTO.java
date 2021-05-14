@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
-public class ReserveOfferDTO {
+public class NewReservationDTO {
 
     @JsonProperty("startDate")
     private final Date startDate;
@@ -24,11 +24,11 @@ public class ReserveOfferDTO {
     private final long offerId;
 
     @JsonCreator
-    public ReserveOfferDTO(@JsonProperty("startDate") Date startDate,
-                           @JsonProperty("endDate") Date endDate,
-                           @JsonProperty("price") float price,
-                           @JsonProperty("clientId") long clientId,
-                           @JsonProperty("offerId") long offerId) {
+    public NewReservationDTO(@JsonProperty("startDate") Date startDate,
+                             @JsonProperty("endDate") Date endDate,
+                             @JsonProperty("price") float price,
+                             @JsonProperty("clientId") long clientId,
+                             @JsonProperty("offerId") long offerId) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.price = price;

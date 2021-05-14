@@ -46,8 +46,8 @@ public class RentalOffer {
     @Column(name = "bedrooms")
     private int bedrooms;
 
-    @Column(name = "quests")
-    private int quests;
+    @Column(name = "guests")
+    private int guests;
 
     @Column(name = "offer_owner_id")
     private long offerOwnerId;
@@ -70,7 +70,7 @@ public class RentalOffer {
             fetch = FetchType.EAGER,
             orphanRemoval = true
     )
-    @OrderBy("create_at desc")
+    @OrderBy("created_at desc")
     private Set<ClientReview> clientReviews = new HashSet<ClientReview>();
 
     public RentalOffer() {
@@ -78,7 +78,7 @@ public class RentalOffer {
 
     public RentalOffer(long id, String title, String description, String city,
                        String address, RentalCategory category, Set<RentalImage> rentalImages,
-                       float dailyRate, int bedrooms, int quests, long offerOwnerId,
+                       float dailyRate, int bedrooms, int guests, long offerOwnerId,
                        Date createdAt, Set<RentalSchedule> rentalSchedule, Set<ClientReview> clientReviews) {
         this.id = id;
         this.title = title;
@@ -89,7 +89,7 @@ public class RentalOffer {
         this.rentalImages = rentalImages;
         this.dailyRate = dailyRate;
         this.bedrooms = bedrooms;
-        this.quests = quests;
+        this.guests = guests;
         this.offerOwnerId = offerOwnerId;
         this.createdAt = createdAt;
         this.rentalSchedule = rentalSchedule;
@@ -168,12 +168,12 @@ public class RentalOffer {
         this.bedrooms = bedrooms;
     }
 
-    public int getQuests() {
-        return quests;
+    public int getGuests() {
+        return guests;
     }
 
-    public void setQuests(int quests) {
-        this.quests = quests;
+    public void setGuests(int guests) {
+        this.guests = guests;
     }
 
     public long getOfferOwnerId() {

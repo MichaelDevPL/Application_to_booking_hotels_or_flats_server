@@ -4,10 +4,10 @@ import app.web.rentalservice.rental.domain.ClientReview;
 import app.web.rentalservice.rental.domain.RentalOffer;
 import app.web.rentalservice.rental.domain.RentalSchedule;
 import app.web.rentalservice.rental.domain.dto.*;
-import app.web.rentalservice.rental.infrastracture.persistance.OfferReviewRepository;
-import app.web.rentalservice.rental.infrastracture.persistance.RentalImageRepository;
+import app.web.rentalservice.rental.infrastracture.persistance.RentalOfferReviewRepository;
+import app.web.rentalservice.rental.infrastracture.persistance.RentalOfferImageRepository;
 import app.web.rentalservice.rental.infrastracture.persistance.RentalOfferRepository;
-import app.web.rentalservice.rental.infrastracture.persistance.RentalScheduleRepository;
+import app.web.rentalservice.rental.infrastracture.persistance.RentalOfferScheduleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,24 +22,16 @@ public class RentalOfferController {
 
     private final RentalOfferRepository rentalOfferRepository;
     private final RentalOfferAssembler offerAssembler;
-    private final BookedOfferAssembler bookedOfferAssembler;
-    private final RentalImageRepository rentalImageRepository;
-    private final RentalScheduleRepository rentalScheduleRepository;
-    private final OfferReviewRepository offerReviewRepository;
+    private final RentalOfferScheduleRepository rentalOfferScheduleRepository;
 
     @Autowired
     public RentalOfferController(RentalOfferRepository rentalOfferRepository,
                                  RentalOfferAssembler offerAssembler,
-                                 BookedOfferAssembler bookedOfferAssembler,
-                                 RentalImageRepository rentalImageRepository,
-                                 RentalScheduleRepository rentalScheduleRepository,
-                                 OfferReviewRepository offerReviewRepository) {
+                                 RentalOfferScheduleRepository rentalOfferScheduleRepository) {
         this.rentalOfferRepository = rentalOfferRepository;
         this.offerAssembler = offerAssembler;
-        this.bookedOfferAssembler = bookedOfferAssembler;
-        this.rentalImageRepository = rentalImageRepository;
-        this.rentalScheduleRepository = rentalScheduleRepository;
-        this.offerReviewRepository = offerReviewRepository;
+        this.rentalOfferScheduleRepository = rentalOfferScheduleRepository;
+
     }
 
     @PostMapping("/create")
@@ -68,38 +60,18 @@ public class RentalOfferController {
         return new ResponseEntity<RentalOffer>(rentalOffer, HttpStatus.OK);
     }
 
-    @PostMapping("/save-reserve")
-    public void saveReserve(@RequestBody ReserveOfferDTO reserveOfferDto) {
+    @PostMapping("/create-reservation")
+    public void saveReservation(@RequestBody NewReservationDTO newReservationDto) {
 
-        this.rentalScheduleRepository.createReserve(new RentalSchedule(
-                reserveOfferDto.getStartDate(),
-                reserveOfferDto.getEndDate(),
-                reserveOfferDto.getClientId(),
-                reserveOfferDto.getPrice(),
-                rentalOfferRepository.getRentalOfferById(reserveOfferDto.getofferId())
+        this.rentalOfferScheduleRepository.createReservation(new RentalSchedule(
+                newReservationDto.getStartDate(),
+                newReservationDto.getEndDate(),
+                newReservationDto.getClientId(),
+                newReservationDto.getPrice(),
+                rentalOfferRepository.getRentalOfferById(newReservationDto.getofferId())
         ));
     }
 
-    @PostMapping("/create-review")
-    public void createOfferReview(@RequestBody NewOfferReviewDTO newReview) {
 
-        this.offerReviewRepository.createNewReview(new ClientReview(
-                newReview.getId(),
-                newReview.getStarRating(),
-                newReview.getComment(),
-                newReview.getCreatedAt(),
-                newReview.getAccountNick(),
-                rentalOfferRepository.getRentalOfferById(newReview.getRentalOfferId())
-        ));
-    }
-
-    @GetMapping("/all-booked-offer-by-user/{clientId}")
-    public ResponseEntity<List<BookedOfferDTO>> getAllBookedOfferByUser(@PathVariable long clientId) {
-
-        return new ResponseEntity<List<BookedOfferDTO>>(this.rentalScheduleRepository.getAllByClientId(clientId)
-                .stream()
-                .map(bookedOfferAssembler::assemble)
-                .collect(Collectors.toList()), HttpStatus.OK);
-    }
 
 }
