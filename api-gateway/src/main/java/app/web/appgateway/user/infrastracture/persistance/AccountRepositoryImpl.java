@@ -79,7 +79,8 @@ public class AccountRepositoryImpl extends SimpleJpaRepository<Account, Long> im
     }
 
     @Override
-    public void deleteAccount(Account account) {
+    public void deleteAccount(long accountId) {
+        Account account = em.find(Account.class, accountId);
         delete(account);
     }
 

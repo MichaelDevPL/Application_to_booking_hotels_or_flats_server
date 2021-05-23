@@ -30,7 +30,8 @@ public class RentalOfferImageRepositoryImpl extends SimpleJpaRepository<RentalIm
     }
 
     @Override
-    public void deleteRentalOfferImage(RentalImage rentalImage) {
-
+    public void deleteRentalOfferImage(long id) {
+        RentalImage rentalImage = em.find(RentalImage.class, id);
+        delete(rentalImage);
     }
 }

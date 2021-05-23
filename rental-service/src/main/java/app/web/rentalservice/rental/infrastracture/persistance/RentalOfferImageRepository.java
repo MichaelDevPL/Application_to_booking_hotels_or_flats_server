@@ -8,6 +8,6 @@ public interface RentalOfferImageRepository {
 
     void updateRentalOfferImage(RentalImage rentalImage);
 
-    void deleteRentalOfferImage(RentalImage rentalImage);
+    void deleteRentalOfferImage(long id);
 
 }

@@ -22,7 +22,7 @@ public class UserRepositoryImpl extends SimpleJpaRepository<User, Long> implemen
     }
 
     @Override
-    public Optional<User> getUserById(Long userId) {
+    public Optional<User> getUserById(long userId) {
         String sqlQuery = "Select u from User u where u.id = :id";
         Query query = em.createQuery(sqlQuery);
         query.setParameter("id", userId);
@@ -36,6 +36,19 @@ public class UserRepositoryImpl extends SimpleJpaRepository<User, Long> implemen
 
         return Optional.of(user.get(0));
 
+    }
+
+    @Override
+    public User getUserByAccountId(long accountId) {
+        String sqlQuery = " select u from User u" +
+                " join fetch u.account a" +
+                " where a.id=:accountId";
+
+        Query query = em.createQuery(sqlQuery);
+
+        query.setParameter("accountId", accountId);
+
+        return (User) query.getResultList().get(0);
     }
 
     @Override
@@ -76,10 +89,5 @@ public class UserRepositoryImpl extends SimpleJpaRepository<User, Long> implemen
         user.setAccount(getUserById(user.getId())
                 .map(User::getAccount).orElseThrow(() -> new IllegalArgumentException("No user with ID: " + user.getId())));
         save(user);
-    }
-
-    @Override
-    public void deleteUser(User user) {
-        delete(user);
     }
 }

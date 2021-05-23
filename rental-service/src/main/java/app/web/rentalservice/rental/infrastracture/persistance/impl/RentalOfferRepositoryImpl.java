@@ -1,7 +1,8 @@
 package app.web.rentalservice.rental.infrastracture.persistance.impl;
 
 import app.web.rentalservice.rental.domain.RentalOffer;
-import app.web.rentalservice.rental.domain.dto.DataToSearchForOffersDto;
+import app.web.rentalservice.rental.domain.dto.CreateOfferResponseDTO;
+import app.web.rentalservice.rental.domain.dto.DataToSearchForOffersDTO;
 import app.web.rentalservice.rental.infrastracture.persistance.RentalOfferRepository;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.stereotype.Repository;
@@ -23,14 +24,14 @@ public class RentalOfferRepositoryImpl extends SimpleJpaRepository<RentalOffer, 
     }
 
     @Override
-    public List<RentalOffer> getOffersMatchingTheParameters(DataToSearchForOffersDto dataToSearchForOffersDto) {
-        String sqlQuery = "SELECT r FROM RentalOffer r" +
-                " WHERE r.city=:city" +
+    public List<RentalOffer> getOffersMatchingTheParameters(DataToSearchForOffersDTO dataToSearchForOffersDto) {
+        String sqlQuery = "select r from RentalOffer r" +
+                " where r.city=:city" +
                 " and (r.bedrooms=:bedrooms or r.guests=:guests)" +
-                " and not EXISTS (" +
-                " SELECT rs FROM RentalSchedule rs" +
-                " WHERE rs.startRentDate BETWEEN :startDate and :endDate" +
-                " and rs.endRentDate BETWEEN :startDate and :endDate and rs.rentalOffer.id = r.id )";
+                " and not exists (" +
+                " select rs from RentalSchedule rs" +
+                " where rs.startRentDate between :startDate and :endDate" +
+                " and rs.endRentDate between :startDate and :endDate and rs.rentalOffer.id = r.id )";
 
         Query query = em.createQuery(sqlQuery);
 
@@ -44,8 +45,15 @@ public class RentalOfferRepositoryImpl extends SimpleJpaRepository<RentalOffer, 
     }
 
     @Override
-    public List<RentalOffer> getOfferByOfferOwnerId(long userId) {
-        return null;
+    public List<RentalOffer> getOfferByOfferOwnerId(long OfferOwnerId) {
+        String sqlQuery = "select r from RentalOffer r" +
+                " where r.offerOwnerId=:offerOwnerId";
+
+        Query query = em.createQuery(sqlQuery);
+
+        query.setParameter("offerOwnerId", OfferOwnerId);
+
+        return (List<RentalOffer>) query.getResultList();
     }
 
     @Override
@@ -54,10 +62,10 @@ public class RentalOfferRepositoryImpl extends SimpleJpaRepository<RentalOffer, 
     }
 
     @Override
-    public boolean createRentalOffer(RentalOffer newRentalOffer) {
+    public CreateOfferResponseDTO createRentalOffer(RentalOffer newRentalOffer) {
         RentalOffer savedRentalOffer = save(newRentalOffer);
 
-        return existsById(savedRentalOffer.getId());
+        return new CreateOfferResponseDTO(existsById(savedRentalOffer.getId()), savedRentalOffer.getId());
     }
 
     @Override
@@ -66,7 +74,8 @@ public class RentalOfferRepositoryImpl extends SimpleJpaRepository<RentalOffer, 
     }
 
     @Override
-    public void deleteRentalOffer(RentalOffer rentalOffer) {
+    public void deleteRentalOffer(long offerId) {
+        RentalOffer rentalOffer = em.find(RentalOffer.class, offerId);
         delete(rentalOffer);
     }
 

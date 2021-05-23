@@ -6,6 +6,7 @@ import app.web.appgateway.security.jtw.JwtTokenProvider;
 import app.web.appgateway.user.domain.Account;
 import app.web.appgateway.user.domain.User;
 import app.web.appgateway.user.domain.dto.SignInDTO;
+import app.web.appgateway.user.domain.dto.SignUpResponseDTO;
 import app.web.appgateway.user.infrastracture.persistance.AccountRepository;
 import app.web.appgateway.user.infrastracture.persistance.UserRepository;
 import org.springframework.http.HttpStatus;
@@ -49,27 +50,24 @@ public class AuthenticationService {
         }
     }
 
-    public boolean signUp(Account account, User user) {
+    public SignUpResponseDTO signUp(Account account, User user) {
 
         boolean loginIsAvailable = accountRepository.existsByLogin(account.getLogin());
         boolean emailIsAvailable = userRepository.userExistsByEmail(user.getEmail());
+        boolean successAccountCreate = false;
 
-        if (loginIsAvailable) {
-            if(emailIsAvailable){
-                account.setUser(user);
-                account.setPassword(passwordEncoder.encode(account.getPassword()));
+        if (loginIsAvailable && emailIsAvailable) {
+            account.setUser(user);
+            account.setPassword(passwordEncoder.encode(account.getPassword()));
 
-                user.setAccount(account);
-                accountRepository.createAccount(account);
-                userRepository.createUser(user);
+            user.setAccount(account);
+            accountRepository.createAccount(account);
+            userRepository.createUser(user);
 
-                return true;
-            }else{
-                throw new CustomException("Email exist ", HttpStatus.UNPROCESSABLE_ENTITY);
-            }
-        } else {
-            return false;
+            successAccountCreate = true;
         }
+
+        return new SignUpResponseDTO(loginIsAvailable, emailIsAvailable, successAccountCreate);
     }
 
     public JwtToken refresh(String login) {

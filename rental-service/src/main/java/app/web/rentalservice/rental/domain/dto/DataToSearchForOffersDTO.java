@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
-public class DataToSearchForOffersDto {
+public class DataToSearchForOffersDTO {
 
     @JsonProperty("city")
     private final String city;
@@ -24,7 +24,7 @@ public class DataToSearchForOffersDto {
     private final int numberOfRoom;
 
     @JsonCreator
-    public DataToSearchForOffersDto(@JsonProperty("city") String city,
+    public DataToSearchForOffersDTO(@JsonProperty("city") String city,
                                     @JsonProperty("startDate") Date startDate,
                                     @JsonProperty("endDate") Date endDate,
                                     @JsonProperty("numberOfGuest") int numberOfGuest,

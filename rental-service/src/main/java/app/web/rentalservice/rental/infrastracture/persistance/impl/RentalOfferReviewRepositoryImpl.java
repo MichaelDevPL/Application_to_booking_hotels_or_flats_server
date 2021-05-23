@@ -24,10 +24,10 @@ public class RentalOfferReviewRepositoryImpl extends SimpleJpaRepository<ClientR
 
     @Override
     public List<ClientReview> getAllReviewByAccountNick(String accountNick) {
-        String sqlQuery = " SELECT cr FROM ClientReview cr " +
+        String sqlQuery = " select cr from ClientReview cr " +
                 " join fetch cr.rentalOffer r" +
-                " WHERE cr.accountNick=:accountNick " +
-                " order by cr.createdAt DESC ";
+                " where cr.accountNick=:accountNick" +
+                " order by cr.createdAt desc";
 
         Query query = em.createQuery(sqlQuery);
 

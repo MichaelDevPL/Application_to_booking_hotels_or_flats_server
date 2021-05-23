@@ -23,11 +23,11 @@ public class RentalOfferScheduleRepositoryImpl extends SimpleJpaRepository<Renta
 
     @Override
     public List<RentalSchedule> getReservationsByClientId(long clientId) {
-        String sqlQuery = " SELECT r FROM RentalSchedule r " +
+        String sqlQuery = " select r from RentalSchedule r " +
                 " join fetch r.rentalOffer ro" +
-                " WHERE r.clientId=:clientId " +
+                " where r.clientId=:clientId " +
                 " and r.endRentDate >= CURDATE()" +
-                " order by r.endRentDate DESC";
+                " order by r.endRentDate desc";
 
         Query query = em.createQuery(sqlQuery);
 
@@ -37,12 +37,27 @@ public class RentalOfferScheduleRepositoryImpl extends SimpleJpaRepository<Renta
     }
 
     @Override
-    public List<RentalSchedule> getHistoryReservationsByClientId(long clientId) {
-        String sqlQuery = " SELECT r FROM RentalSchedule r " +
+    public List<RentalSchedule> getReservationsByRentalOfferId(long rentalOfferId) {
+        String sqlQuery = " select r from RentalSchedule r " +
                 " join fetch r.rentalOffer ro" +
-                " WHERE r.clientId=:clientId " +
+                " where ro.id=:rentalOfferId " +
+                " and r.endRentDate >= CURDATE()" +
+                " order by r.endRentDate desc";
+
+        Query query = em.createQuery(sqlQuery);
+
+        query.setParameter("rentalOfferId", rentalOfferId);
+
+        return (List<RentalSchedule>) query.getResultList();
+    }
+
+    @Override
+    public List<RentalSchedule> getHistoryReservationsByClientId(long clientId) {
+        String sqlQuery = " select r from RentalSchedule r " +
+                " join fetch r.rentalOffer ro" +
+                " where r.clientId=:clientId " +
                 " and r.endRentDate < CURDATE()" +
-                " order by r.endRentDate DESC";
+                " order by r.endRentDate desc";
 
         Query query = em.createQuery(sqlQuery);
 

@@ -6,7 +6,9 @@ import java.util.Optional;
 
 public interface UserRepository {
 
-    Optional<User> getUserById(Long userId);
+    Optional<User> getUserById(long userId);
+
+    User getUserByAccountId (long accountId);
 
     Optional<User> getUserByEmail(String email);
 
@@ -15,6 +17,4 @@ public interface UserRepository {
     void createUser(User user);
 
     void updateUser(User user);
-
-    void deleteUser(User user);
 }

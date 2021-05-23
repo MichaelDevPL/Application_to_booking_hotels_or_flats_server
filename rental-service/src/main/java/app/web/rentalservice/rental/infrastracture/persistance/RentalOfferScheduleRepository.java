@@ -9,6 +9,8 @@ public interface RentalOfferScheduleRepository {
 
     public List<RentalSchedule> getReservationsByClientId(long clientId);
 
+    public List<RentalSchedule> getReservationsByRentalOfferId(long rentalOfferId);
+
     public List<RentalSchedule> getHistoryReservationsByClientId(long clientId);
 
     void createReservation(RentalSchedule rentalSchedule);

@@ -10,18 +10,30 @@ public class AccountInDTO {
 
     @JsonProperty("login")
     private final String login;
+
     @JsonProperty("password")
     private final String password;
+
     @JsonProperty("role")
     private final Role role;
+
+    @JsonProperty("questionToRemindPassword")
+    private final String questionToRemindPassword;
+
+    @JsonProperty("answerToRemindPassword")
+    private final String answerToRemindPassword;
 
     @JsonCreator
     public AccountInDTO(@JsonProperty("login") String login,
                         @JsonProperty("password") String password,
-                        @JsonProperty("role") Role role) {
+                        @JsonProperty("role") Role role,
+                        @JsonProperty("questionToRemindPassword") String questionToRemindPassword,
+                        @JsonProperty("answerToRemindPassword") String answerToRemindPassword) {
         this.login = login;
         this.password = password;
         this.role = role;
+        this.questionToRemindPassword = questionToRemindPassword;
+        this.answerToRemindPassword = answerToRemindPassword;
     }
 
     public String getLogin() {
@@ -32,7 +44,15 @@ public class AccountInDTO {
         return password;
     }
 
-    public Role getRoles() {
+    public Role getRole() {
         return role;
+    }
+
+    public String getQuestionToRemindPassword() {
+        return questionToRemindPassword;
+    }
+
+    public String getAnswerToRemindPassword() {
+        return answerToRemindPassword;
     }
 }

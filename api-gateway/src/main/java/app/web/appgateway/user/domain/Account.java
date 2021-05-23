@@ -1,5 +1,6 @@
 package app.web.appgateway.user.domain;
 
+import app.web.appgateway.user.domain.dto.AccountInDTO;
 import app.web.appgateway.user.domain.enums.Role;
 
 import javax.persistence.*;
@@ -23,6 +24,12 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @Column(name = "question_to_remind_password")
+    private String questionToRemindPassword;
+
+    @Column(name = "answer_to_remind_password")
+    private String answerToRemindPassword;
+
     @OneToOne(
             mappedBy = "account",
             cascade = CascadeType.ALL,
@@ -34,18 +41,20 @@ public class Account {
     public Account() {
     }
 
-    public Account(String login, String password, Role role) {
-        this.login = login;
-        this.password = password;
-        this.role = role;
+    public Account(AccountInDTO accountInDTO) {
+        this.login = accountInDTO.getLogin();
+        this.password = accountInDTO.getPassword();
+        this.role = accountInDTO.getRole();
+        this.questionToRemindPassword = accountInDTO.getQuestionToRemindPassword();
+        this.answerToRemindPassword = accountInDTO.getAnswerToRemindPassword();
     }
 
-    public Account(long id, String login, String password, Role role, User user) {
-        this.id = id;
+    public Account(String login, String password, Role role, String questionToRemindPassword, String answerToRemindPassword) {
         this.login = login;
         this.password = password;
         this.role = role;
-        this.user = user;
+        this.questionToRemindPassword = questionToRemindPassword;
+        this.answerToRemindPassword = answerToRemindPassword;
     }
 
     public long getId() {
@@ -88,14 +97,19 @@ public class Account {
         this.user = user;
     }
 
-    @Override
-    public String toString() {
-        return "Account{" +
-                "id=" + id +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", role=" + role +
-                ", user=" + user +
-                '}';
+    public String getQuestionToRemindPassword() {
+        return questionToRemindPassword;
+    }
+
+    public void setQuestionToRemindPassword(String questionToRemindPassword) {
+        this.questionToRemindPassword = questionToRemindPassword;
+    }
+
+    public String getAnswerToRemindPassword() {
+        return answerToRemindPassword;
+    }
+
+    public void setAnswerToRemindPassword(String answerToRemindPassword) {
+        this.answerToRemindPassword = answerToRemindPassword;
     }
 }

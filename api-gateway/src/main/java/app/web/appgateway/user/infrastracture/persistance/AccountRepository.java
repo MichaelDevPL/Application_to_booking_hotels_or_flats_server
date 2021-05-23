@@ -17,7 +17,7 @@ public interface AccountRepository extends UserDetailsService {
 
     Account updateAccount(Account account);
 
-    void deleteAccount(Account account);
+    void deleteAccount(long accountId);
 
     boolean existsByLogin(String login);
 }

@@ -1,5 +1,6 @@
 package app.web.appgateway.user.domain;
 
+import app.web.appgateway.user.domain.dto.UserDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -33,6 +34,13 @@ public class User {
     private Account account;
 
     public User() {
+    }
+
+    public User(UserDTO userDTO) {
+        this.name = userDTO.getName();
+        this.surname = userDTO.getSurname();
+        this.phone = userDTO.getPhone();
+        this.email = userDTO.getEmail();
     }
 
     public User(String name, String surname, String phone, @Email String email) {
