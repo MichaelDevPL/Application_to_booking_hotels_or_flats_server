@@ -38,6 +38,14 @@ public class ClientReview {
     public ClientReview() {
     }
 
+    public ClientReview(double starRating, String comment, Date createdAt, String accountNick, RentalOffer rentalOffer) {
+        this.starRating = starRating;
+        this.comment = comment;
+        this.createdAt = createdAt;
+        this.accountNick = accountNick;
+        this.rentalOffer = rentalOffer;
+    }
+
     public ClientReview(long id, double starRating, String comment, Date createdAt,
                         String accountNick, RentalOffer rentalOffer) {
         this.id = id;

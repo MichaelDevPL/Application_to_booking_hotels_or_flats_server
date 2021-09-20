@@ -4,10 +4,9 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="false" />
-        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
+        <option name="gradleHome" value="/usr/share/java/gradle" />
         <option name="gradleJvm" value="11" />
         <option name="modules">
           <set>
@@ -16,10 +15,9 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="false" />
-        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/discovery-server" />
+        <option name="gradleHome" value="/usr/share/java/gradle" />
         <option name="gradleJvm" value="11" />
         <option name="modules">
           <set>
@@ -28,10 +26,9 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="false" />
-        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/rental-service" />
+        <option name="gradleHome" value="/usr/share/java/gradle" />
         <option name="gradleJvm" value="11" />
         <option name="modules">
           <set>
@@ -40,10 +37,9 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="false" />
-        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/upload-service" />
+        <option name="gradleHome" value="/usr/share/java/gradle" />
         <option name="gradleJvm" value="11" />
         <option name="modules">
           <set>

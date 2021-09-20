@@ -8,9 +8,6 @@ import java.util.Date;
 
 public class NewOfferReviewDTO {
 
-    @JsonProperty("id")
-    private final long id;
-
     @JsonProperty("starRating")
     private final int starRating;
 
@@ -27,22 +24,16 @@ public class NewOfferReviewDTO {
     private final long rentalOfferId;
 
     @JsonCreator
-    public NewOfferReviewDTO(@JsonProperty("login") long id,
-                             @JsonProperty("starRating") int starRating,
+    public NewOfferReviewDTO(@JsonProperty("starRating") int starRating,
                              @JsonProperty("comment") String comment,
                              @JsonProperty("createdAt") Date createdAt,
                              @JsonProperty("accountNick") String accountNick,
                              @JsonProperty("rentalOfferId") long rentalOfferId) {
-        this.id = id;
         this.starRating = starRating;
         this.comment = comment;
         this.createdAt = createdAt;
         this.accountNick = accountNick;
         this.rentalOfferId = rentalOfferId;
-    }
-
-    public long getId() {
-        return id;
     }
 
     public int getStarRating() {

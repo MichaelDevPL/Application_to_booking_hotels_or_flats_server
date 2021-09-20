@@ -8,10 +8,10 @@ plugins {
 group = 'app.web'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+targetCompatibility = '11'
 
 repositories {
 	mavenCentral()
-	jcenter()
 }
 
 ext {
@@ -19,20 +19,20 @@ ext {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-	implementation 'org.springframework.security:spring-security-test'
-	implementation 'org.mariadb.jdbc:mariadb-java-client:2.6.0'
-	implementation 'javax.validation:validation-api'
+	implementation 'org.springframework.boot:spring-boot-starter:2.5.3'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.5.3'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.3'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:3.0.3'
+	implementation 'org.springframework.security:spring-security-test:5.5.1'
+	implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.3'
+	implementation 'javax.validation:validation-api:2.0.1.Final'
 	implementation 'org.codehaus.groovy:groovy:3.0.8'
 	implementation 'org.codehaus.groovy:groovy-all:3.0.8'
 
 	testImplementation "org.codehaus.groovy.modules.http-builder:http-builder:0.7.1"
-	testImplementation 'org.spockframework:spock-core:2.0-M5-groovy-3.0'
-	testImplementation 'org.spockframework:spock-spring:2.0-M5-groovy-3.0'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+	testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+	testImplementation 'org.spockframework:spock-spring:2.0-groovy-3.0'
+	testImplementation('org.springframework.boot:spring-boot-starter-test:2.5.3') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 
@@ -46,4 +46,8 @@ dependencyManagement {
 
 test {
 	useJUnitPlatform()
+}
+
+bootJar {
+	mainClassName("app.web.rentalService.RentalServiceApplication")
 }

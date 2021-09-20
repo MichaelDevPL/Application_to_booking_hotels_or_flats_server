@@ -4,48 +4,97 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60ed90a2-3982-4cdd-a98e-2d4c725b1feb" name="Default Changelist" comment="">
+    <list default="true" id="9d5e0fd3-fac1-4f35-9f99-f04636ee0ff3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rental-service/src/test/groovy/app/web/rentalservice/rental/infrastracture/web/RentalOfferReviewControllerTest.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rental-service/src/test/groovy/app/web/rentalservice/rental/infrastracture/web/RentalOfferScheduleControllerTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Application_to_booking_hotels_or_flats_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Application_to_booking_hotels_or_flats_server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries-with-intellij-classes.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/security/authentication/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/security/authentication/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/security/authentication/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/security/authentication/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/domain/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/domain/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/domain/dto/AccountInDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/domain/dto/AccountInDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/domain/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/domain/enums/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/persistance/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/persistance/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/persistance/AccountRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/persistance/AccountRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/persistance/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/persistance/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/persistance/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/persistance/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/web/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/web/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/app/web/appgateway/user/infrastracture/web/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rental-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/DataToSearchForOffersDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/DataToSearchForOffersDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalOfferImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalOfferImageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalOfferRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalOfferRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalOfferScheduleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/RentalOfferScheduleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferImageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferImageRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferReviewRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferReviewRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferScheduleRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/persistance/impl/RentalOfferScheduleRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/web/RentalOfferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/web/RentalOfferController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/web/RentalOfferScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/web/RentalOfferScheduleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/116877724.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/116877724.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/123367431.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225060852.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225060852.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225810874.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225810874.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/232641906.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/249824676.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/249824676.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/254185795.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/1/Cracow, Poland/254185795.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/ClientReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/ClientReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/NewOfferReviewDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/domain/dto/NewOfferReviewDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/web/RentalOfferReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/main/java/app/web/rentalservice/rental/infrastracture/web/RentalOfferReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/test/groovy/app/web/rentalservice/rental/infrastracture/web/RentalOfferControllerTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/test/groovy/app/web/rentalservice/rental/infrastracture/web/RentalOfferControllerTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-service/src/test/groovy/app/web/rentalservice/rental/infrastracture/web/configuration/TestDataConfig.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/rental-service/src/test/groovy/app/web/rentalservice/rental/infrastracture/web/configuration/TestDataConfig.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/upload-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload-service/src/main/java/app/web/uploadservice/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/upload-service/src/main/java/app/web/uploadservice/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Berlin, Germany/116877724.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Berlin, Germany/123367431.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Berlin, Germany/225060852.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Berlin, Germany/225810874.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Berlin, Germany/232641906.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Berlin, Germany/249824676.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Berlin, Germany/254185795.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/159893325.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257101632.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257102743.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257103943.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257106498.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257107560.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257108605.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracovie, Poland/257109948.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/106539183.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/106596257.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/115648799.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/115650468.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/116877724.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/124810017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/124810202.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/13125860.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/13125861.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/13125904.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/159893325.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/159893369.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/159893378.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164435364.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164436534.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164436940.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/164438962.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213494803.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213502124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213502128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/213502135.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225060852.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/225810874.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/238403042.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/239329894.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/249824676.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/254185795.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/273525651.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/273525668.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/274031884.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/286771971.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1/Cracow, Poland/287353447.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6/Cracow, Poland/116877724.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6/Cracow, Poland/273525651.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6/Cracow, Poland/273525664.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6/Cracow, Poland/273525668.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6/Cracow, Poland/Praca-Inzynierska-2021.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/api-gateway">
@@ -61,32 +110,66 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/discovery-server">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/api-gateway">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/rental-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/upload-service">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="rental-service" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="rental-service" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="rental-service" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="false" />
+      </map>
+    </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
-  </component>
-  <component name="ProjectId" id="1oZ9gtf0ZtMKFlDQGlEI0DDJWlA" />
+  <component name="ProjectId" id="1wduqrYUNp3tpGTqyJDl2QPVY0x" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -99,17 +182,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Spock" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Spock" value="spock.lang.Specification" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/rental-service/src/test/groovy/app/web/rentalservice/rental/infrastracture/web" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.5114943" />
@@ -118,163 +190,94 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="app.web.rentalservice.rental.infrastracture.persistance" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="spock.lang.Specification" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="app.web.rentalservice.rental.infrastracture.web.configuration" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="app.web.rentalservice.rental.infrastracture.web" />
-      <recent name="app.web.appgateway.security.authentication" />
-      <recent name="app.web.appgateway" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
-        <option value="Application" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RentalOfferControllerTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Spring Boot.DiscoveryServerApplication">
+    <configuration name="RentalOfferScheduleControllerTest.Delete reservation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/rental-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;app.web.rentalservice.rental.infrastracture.web.RentalOfferScheduleControllerTest.Delete reservation&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="ApiGatewayApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api-gateway.test" />
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="api-gateway.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="app.web.appgateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="app.web.appgateway" />
-      <option name="MAIN_CLASS_NAME" value="app.web.appgateway.ApiGatewayApplicationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthenticationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api-gateway.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.web.appgateway.security.authentication.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.web.appgateway.security.authentication" />
-      <option name="MAIN_CLASS_NAME" value="app.web.appgateway.security.authentication.AuthenticationControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RentalOfferControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rental-service.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.web.rentalservice.rental.infrastracture.web.configuration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.web.rentalservice.rental.infrastracture.web" />
-      <option name="MAIN_CLASS_NAME" value="app.web.rentalservice.rental.infrastracture.web.RentalOfferControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RentalOfferControllerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rental-service.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.web.rentalservice.rental.infrastracture.web.configuration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.web.rentalservice.rental.infrastracture.web" />
-      <option name="MAIN_CLASS_NAME" value="app.web.rentalservice.rental.infrastracture.web.RentalOfferControllerTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RentalOfferControllerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rental-service.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.web.rentalservice.rental.infrastracture.web.configuration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.web.rentalservice.rental.infrastracture.web" />
-      <option name="MAIN_CLASS_NAME" value="app.web.rentalservice.rental.infrastracture.web.RentalOfferControllerTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="api-gateway.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.web.appgateway.ApiGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="discovery-server.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.web.discoveryserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.web.discoveryserver.DiscoveryServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RentalServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="RentalServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="rental-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.web.rentalservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.web.rentalservice.RentalServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UploadServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="UploadServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="upload-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.web.uploadservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.web.uploadservice.UploadServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.ApiGatewayApplicationTest" />
-      <item itemvalue="JUnit.AuthenticationControllerTest" />
-      <item itemvalue="JUnit.RentalOfferControllerTest" />
-      <item itemvalue="JUnit.RentalOfferControllerTest.test" />
-      <item itemvalue="Spring Boot.ApiGatewayApplication" />
-      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
-      <item itemvalue="Spring Boot.RentalServiceApplication" />
-      <item itemvalue="Spring Boot.UploadServiceApplication" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RentalOfferControllerTest" />
-        <item itemvalue="JUnit.RentalOfferControllerTest.test" />
-        <item itemvalue="JUnit.AuthenticationControllerTest" />
-        <item itemvalue="JUnit.ApiGatewayApplicationTest" />
+        <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
+        <item itemvalue="Spring Boot.UploadServiceApplication" />
+        <item itemvalue="Spring Boot.RentalServiceApplication" />
+        <item itemvalue="Gradle.RentalOfferScheduleControllerTest.Delete reservation" />
       </list>
     </recent_temporary>
   </component>
@@ -282,102 +285,23 @@
   <component name="SpringBeansView">
     <option name="beanDetailsProportion" value="0.3" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="60ed90a2-3982-4cdd-a98e-2d4c725b1feb" name="Default Changelist" comment="" />
-      <created>1613483361506</created>
+      <changelist id="9d5e0fd3-fac1-4f35-9f99-f04636ee0ff3" name="Changes" comment="" />
+      <created>1628800986682</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1613483361506</updated>
-      <workItem from="1614527397242" duration="778000" />
-      <workItem from="1614601447220" duration="681000" />
-      <workItem from="1614702953682" duration="612000" />
-      <workItem from="1614712475204" duration="1811000" />
-      <workItem from="1614769889902" duration="3039000" />
-      <workItem from="1614786616562" duration="5197000" />
-      <workItem from="1614872015761" duration="892000" />
-      <workItem from="1615105197015" duration="3255000" />
-      <workItem from="1615205471325" duration="8948000" />
-      <workItem from="1615229530044" duration="5403000" />
-      <workItem from="1615241585007" duration="7150000" />
-      <workItem from="1615363854281" duration="78000" />
-      <workItem from="1615452017054" duration="6716000" />
-      <workItem from="1615482458343" duration="2481000" />
-      <workItem from="1615807890196" duration="4321000" />
-      <workItem from="1615932253607" duration="745000" />
-      <workItem from="1615973717570" duration="3253000" />
-      <workItem from="1616013666334" duration="2414000" />
-      <workItem from="1616096408051" duration="1205000" />
-      <workItem from="1616166128934" duration="663000" />
-      <workItem from="1616327123291" duration="599000" />
-      <workItem from="1616364258816" duration="599000" />
-      <workItem from="1616453485798" duration="1038000" />
-      <workItem from="1616498182958" duration="2310000" />
-      <workItem from="1616524831745" duration="701000" />
-      <workItem from="1616585206852" duration="1586000" />
-      <workItem from="1616773515042" duration="355000" />
-      <workItem from="1616969314122" duration="6701000" />
-      <workItem from="1617026627517" duration="1239000" />
-      <workItem from="1617142921348" duration="60000" />
-      <workItem from="1617143011966" duration="3376000" />
-      <workItem from="1617223230224" duration="1207000" />
-      <workItem from="1617297500338" duration="1877000" />
-      <workItem from="1617525173951" duration="1552000" />
-      <workItem from="1617536759667" duration="2015000" />
-      <workItem from="1617577847827" duration="610000" />
-      <workItem from="1617615235163" duration="4812000" />
-      <workItem from="1617642885691" duration="7245000" />
-      <workItem from="1617707400591" duration="3961000" />
-      <workItem from="1617732724520" duration="1304000" />
-      <workItem from="1617785502909" duration="5149000" />
-      <workItem from="1617994319777" duration="10235000" />
-      <workItem from="1618093999772" duration="701000" />
-      <workItem from="1618148869657" duration="1239000" />
-      <workItem from="1618164588956" duration="1809000" />
-      <workItem from="1618217452138" duration="650000" />
-      <workItem from="1618226347299" duration="704000" />
-      <workItem from="1618252254181" duration="2192000" />
-      <workItem from="1618315443167" duration="1261000" />
-      <workItem from="1618327490270" duration="629000" />
-      <workItem from="1618333335898" duration="2263000" />
-      <workItem from="1618584645447" duration="665000" />
-      <workItem from="1618767587707" duration="867000" />
-      <workItem from="1618850939232" duration="4621000" />
-      <workItem from="1618917624480" duration="5487000" />
-      <workItem from="1618942609906" duration="1506000" />
-      <workItem from="1619001371487" duration="13701000" />
-      <workItem from="1620671262741" duration="560000" />
-      <workItem from="1620671845254" duration="1131000" />
-      <workItem from="1620673621493" duration="437000" />
-      <workItem from="1620674558819" duration="3217000" />
-      <workItem from="1620815369830" duration="1448000" />
-      <workItem from="1620828177217" duration="1619000" />
-      <workItem from="1620943044467" duration="6276000" />
-      <workItem from="1620949470567" duration="1849000" />
-      <workItem from="1620985625968" duration="9459000" />
-      <workItem from="1621061176633" duration="534000" />
-      <workItem from="1621070723974" duration="10770000" />
-      <workItem from="1621088087900" duration="1610000" />
-      <workItem from="1621154994320" duration="184000" />
-      <workItem from="1621155193945" duration="12193000" />
-      <workItem from="1621249766379" duration="6202000" />
-      <workItem from="1621271276619" duration="6216000" />
-      <workItem from="1621338307212" duration="332000" />
-      <workItem from="1621338662135" duration="6731000" />
-      <workItem from="1621369270791" duration="5452000" />
-      <workItem from="1621431026567" duration="1029000" />
-      <workItem from="1621452126839" duration="3520000" />
-      <workItem from="1621469749403" duration="29000" />
-      <workItem from="1621617911530" duration="3121000" />
-      <workItem from="1621679389076" duration="2527000" />
-      <workItem from="1621717890466" duration="2622000" />
-      <workItem from="1621764031762" duration="5958000" />
-      <workItem from="1621781539845" duration="29000" />
-      <workItem from="1621803493349" duration="1032000" />
-      <workItem from="1621806860750" duration="728000" />
+      <updated>1628800986682</updated>
+      <workItem from="1628800988709" duration="3223000" />
+      <workItem from="1629186654865" duration="1311000" />
+      <workItem from="1629557006225" duration="774000" />
+      <workItem from="1629756439238" duration="7051000" />
+      <workItem from="1629836279851" duration="3972000" />
+      <workItem from="1629973502981" duration="968000" />
+      <workItem from="1630065801850" duration="773000" />
+      <workItem from="1631111121575" duration="52000" />
+      <workItem from="1631285116607" duration="117000" />
+      <workItem from="1632178853943" duration="517000" />
     </task>
     <servers />
   </component>
@@ -395,25 +319,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <default-breakpoints>
-        <breakpoint type="java-exception">
-          <dependency id="0" />
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="app.web.rentalservice.rental.domain.ClientReview" memberName="rentalOffer" />
-        <PinnedItemInfo parentTag="app.web.rentalservice.rental.domain.ClientReview" memberName="accountNick" />
-        <PinnedItemInfo parentTag="app.web.rentalservice.rental.domain.dto.ReserveOfferDto" memberName="rentalOfferId" />
-      </pinned-members>
-    </pin-to-top-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

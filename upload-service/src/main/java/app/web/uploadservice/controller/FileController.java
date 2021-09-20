@@ -2,6 +2,7 @@ package app.web.uploadservice.controller;
 
 import app.web.uploadservice.commons.FileDataResponse;
 import app.web.uploadservice.storage.StorageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +17,8 @@ import java.util.stream.Collectors;
 public class FileController {
 
     private final StorageService storageService;
-
+	
+@Autowired
     public FileController(StorageService storageService) {
         this.storageService = storageService;
     }

@@ -33,7 +33,6 @@ public class RentalOfferReviewController {
     public void createOfferReview(@RequestBody NewOfferReviewDTO newReview) {
 
         this.rentalOfferReviewRepository.createReview(new ClientReview(
-                newReview.getId(),
                 newReview.getStarRating(),
                 newReview.getComment(),
                 newReview.getCreatedAt(),

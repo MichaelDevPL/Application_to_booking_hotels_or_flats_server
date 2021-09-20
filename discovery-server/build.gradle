@@ -7,6 +7,7 @@ plugins {
 group = 'app.web'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+targetCompatibility = '11'
 
 repositories {
 	mavenCentral()
@@ -19,6 +20,8 @@ ext {
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
 	implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.3'
+	implementation 'com.thoughtworks.xstream:xstream:1.4.17'
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
@@ -32,4 +35,8 @@ dependencyManagement {
 
 test {
 	useJUnitPlatform()
+}
+
+bootJar {
+	mainClassName("app.web.discoveryserver.DiscoveryServerApplication")
 }

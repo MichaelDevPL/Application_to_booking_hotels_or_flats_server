@@ -29,6 +29,26 @@ class RentalOfferControllerTest extends Specification {
 
     }
 
+    def 'User should be able to perform update request to change offer data'() {
+        setup:
+        def createOfferResponse = testData.createTestOffer().responseData
+        def getOfferDataResponse = restClient.get(path: '/offer/' + createOfferResponse.offerId.toString())
+
+        when:
+        getOfferDataResponse.responseData.guests = 1
+        restClient.put(path: '/offer/update', body: getOfferDataResponse.responseData,
+                requestContentType: 'application/json')
+        def response = restClient.get(path: '/offer/' + createOfferResponse.offerId.toString())
+
+        then:
+        response.status == 200
+        !response.responseData.empty
+        response.responseData.guests == 1
+
+        cleanup:
+        testData.deleteTestOffer(createOfferResponse.offerId)
+    }
+
     def 'user should be able to perform post request by specify data to get offer list'() {
         setup:
         def createOfferResponse = testData.createTestOffer().responseData
@@ -52,7 +72,7 @@ class RentalOfferControllerTest extends Specification {
         def createOfferResponse = testData.createTestOffer().responseData
 
         when:
-        def response = restClient.get(path: '/offer/' + createOfferResponse.offerId)
+        def response = restClient.get(path: '/offer/' + createOfferResponse.offerId.toString())
 
         then:
         response.status == 200
@@ -66,16 +86,32 @@ class RentalOfferControllerTest extends Specification {
     def 'user should be able to perform post request to create reservation'() {
         setup:
         def createOfferResponse = testData.createTestOffer().responseData
-        def requestBody = [startDate: '2021-03-15', endDate: '2021-03-25',
-                           price: '1200', clientId: '1',
-                           offerId: createOfferResponse.offerId]
 
         when:
-        def response = restClient.post(path: '/offer/create-reservation',
-                body: requestBody, requestContentType: 'application/json')
+        def response = testData.addNewOfferReservation(createOfferResponse)
 
         then:
         response.status == 200
+        !response.responseData.empty
+        response.responseData.rentalSchedule.size() == 1
+
+        cleanup:
+        testData.deleteTestOffer(createOfferResponse.offerId)
+    }
+
+    def 'Delete select offer image'() {
+        setup:
+        def createOfferResponse = testData.createTestOffer().responseData
+        def getOfferDataResponse = restClient.get(path: '/offer/' + createOfferResponse.offerId.toString()).responseData
+
+        when:
+        restClient.delete(path: '/offer/deleteImage/' + getOfferDataResponse.rentalImages.first().id.toString())
+        getOfferDataResponse = restClient.get(path: '/offer/' + createOfferResponse.offerId.toString())
+
+        then:
+        getOfferDataResponse.status == 200
+        !getOfferDataResponse.responseData.empty
+        getOfferDataResponse.responseData.rentalImages.size() == 1
 
         cleanup:
         testData.deleteTestOffer(createOfferResponse.offerId)
